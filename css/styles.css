@@ -451,12 +451,18 @@ ul {
 }
 
 .social-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--background-color-1);
+  border-radius: 50%;
+  max-width: 44px;
+  max-height: 44px;
+  fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover {
-  --color5: var(--hover-and-button-color);
-  --color1: var(--text-color-2);
+  background-color: var(--hover-and-button-color);
+  fill: var(--text-color-2);
 }
 
 .clients-box {
@@ -492,13 +498,16 @@ ul {
 }
 
 .social-icon-footer {
-  --color5: #ffffff1a;
-  --color1: var(--text-color-2);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  max-width: 44px;
+  max-height: 44px;
+  fill: var(--text-color-2);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-footer:hover {
-  --color5: var(--hover-and-button-color);
-  --color1: var(--text-color-2);
+  background-color: var(--hover-and-button-color);
 }
 
 .active-navigation-link::after {
