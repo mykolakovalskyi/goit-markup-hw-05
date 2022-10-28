@@ -6,6 +6,7 @@
   --text-color-2: #ffffff;
   --hover-and-button-color: #2196f3;
   --border-color: #eeeeee;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -58,12 +59,12 @@ ul {
   letter-spacing: 0.02em;
   text-align: left;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--hover-and-button-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-header {
@@ -76,13 +77,15 @@ ul {
   text-align: left;
   display: flex;
   align-items: center;
+  fill: var(--text-color-1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-header:hover,
 .contacts-header:focus {
   color: var(--hover-and-button-color);
-  --color4: var(--hover-and-button-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--hover-and-button-color);
 }
 
 .list {
@@ -127,6 +130,9 @@ ul {
   padding-block: 10px;
   padding-left: 41px;
   padding-right: 41px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -134,9 +140,6 @@ ul {
   background-color: var(--hover-and-button-color);
   color: var(--text-color-2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-2-box {
@@ -232,12 +235,12 @@ ul {
 .contacts-footer {
   color: var(--text-color-1);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-footer:hover,
 .contacts-footer:focus {
   color: var(--hover-and-button-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-section-box {
@@ -259,6 +262,9 @@ ul {
   padding-block: 6px;
   padding-left: 22px;
   padding-right: 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter:hover,
@@ -267,16 +273,16 @@ ul {
   color: var(--text-color-2);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-section-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-section-item:hover,
 .portfolio-section-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-name {
@@ -444,11 +450,13 @@ ul {
   margin-top: 16px;
 }
 
+.social-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social-icon:hover {
   --color5: var(--hover-and-button-color);
   --color1: var(--text-color-2);
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-box {
@@ -458,14 +466,16 @@ ul {
 }
 
 .client-box {
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
+  fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-box:hover {
-  --color1: var(--hover-and-button-color);
+  fill: var(--hover-and-button-color);
   border-color: var(--hover-and-button-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-footer {
